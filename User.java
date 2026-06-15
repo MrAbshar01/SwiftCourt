@@ -6,18 +6,6 @@ abstract class User {
     public abstract String getUserDetails();
 }
 
-class Staff extends User {
-    private String staffId;
-    public Staff(String name, String staffId) {
-        super(name);
-        this.staffId = staffId;
-    }
-    @Override
-    public String getUniqueId() { return staffId; }
-    @Override
-    public String getUserDetails() { return "Staff: " + name + " (ID: " + staffId + ")"; }
-}
-
 abstract class Facility {
     protected String facilityId;
     protected String name;
